@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./newproject.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div class="profile">
+        <img src="./images/Alone_boy_dp_-2964.jpg" alt="" />
+        <span class="username">USER</span>
+      </div>
+      <a href="./myprojects.html">My projects</a>
+    </div>
+
+    <main>
+      <div class="inputs">
+        <form>
+          <div>
+            <label for="imgurl">Img URL</label>
+            <input type="text" id="imgurl" />
+          </div>
+          <div>
+            <label for="title">Name</label>
+            <input type="text" id="title" />
+          </div>
+          <div>
+            <label for="job">Job</label>
+            <input type="text" id="job" />
+          </div>
+          <div>
+            <label for="date">Date of Birth</label>
+            <input type="date" id="date" />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea type="text" id="description">I'am:</textarea>
+          </div>
+
+          <button class="saveBtn">SAVE</button>
+        </form>
+      </div>
+
+      <div class="result">
+        <div class="paper">
+          <div class="main">
+            <img class="getImg" alt="" />
+            <h2 class="name"></h2>
+          </div>
+
+          <div class="job">Job: <span class="getJob"></span></div>
+          <div class="date">Date Of Birth: <span class="getDate"></span></div>
+
+          <div class="about">
+            About Me: <br />
+            <span class="getAbout"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+
+      let imgurl = document.getElementById("imgurl")
+      let pic = document.querySelector(".getImg")
+      let title = document.getElementById("title")
+      let ism = document.querySelector(".name")
+      let job = document.querySelector("#job")
+      let gjob = document.querySelector(".getJob")
+      let date = document.querySelector("#date")
+      let gdata = document.querySelector(".getDate")
+      let description = document.querySelector("#description")
+      let about = document.querySelector(".getAbout")
+      
+      
+     title.addEventListener("input", (e) => {
+     console.log(e.target.value);
+     ism.textContent = e.target.value
+    })
+    
+    imgurl.addEventListener("input" , (e) =>{
+     pic.src = e.target.value
+    })
+
+    job.addEventListener("input" , (e) =>{
+      gjob.textContent = e.target.value
+    })
+
+    date.addEventListener("input" , (e) =>{
+      gdata.textContent = e.target.value
+    })
+
+    description.addEventListener("input" , (e) =>{
+      about.textContent = e.target.value
+    })
+
+
+
+ 
+ </script>
+
+  </body>
+</html>

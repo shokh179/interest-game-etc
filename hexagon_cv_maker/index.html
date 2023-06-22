@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="">
+            <div class="logo">
+              <img
+                src="./images/Screenshot_2022-11-09_193403-removebg-preview.png"
+                alt=""
+              />Hexagon
+            </div>
+          </a>
+
+          <ul>
+            <li>
+              <a class="check"  style="cursor: pointer">Create a Project</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="showcaseWrap">
+      <div class="container">
+        <div class="showcase">
+          <div class="left">
+            <h1>Make CV with <span>Hexagon</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              optio eligendi officiis perferendis nesciunt. Minus nisi
+              reiciendis vero et nobis inventore, consequatur eveniet odio eius.
+              Error, architecto, illum, commodi perspiciatis aliquam ullam neque
+              ipsam amet iure animi cupiditate aut dolorum debitis beatae cumque
+              omnis molestias facere laboriosam explicabo magnam. Obcaecati!
+            </p>
+            <div class="btns">
+              <a href="./registration.html">Join us</a>
+              <a href="./login.html">Log in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+  //  if (userdata.autodirect == true) {
+  //    function pro() {
+  //     window.location.href ="./newproject.html"
+  //    }
+  //  }
+
+    let check = document.querySelector(".check")
+
+    check.addEventListener("click", (e)=>{
+      if (localStorage.getItem("info") == "true") {
+        window.location.href ="./newproject.html"
+      }else{
+        window.location.href = "./login.html"
+      }
+      
+      
+    })
+  
+    // if (info.isTrusted == true) {
+    //   function pro() {
+    //     window.location.href ="./newproject.html"
+    //   }
+    // } else{
+    //   function pro() {
+    //     window.location.href ="./login.html"
+    //   }
+    // }
+
+
+</script>
+    
+  </body>
+</html>

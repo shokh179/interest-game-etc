@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./myprojects.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div class="profile">
+        <img src="./images/Alone_boy_dp_-2964.jpg" alt="" />
+        <span class="username">USER</span>
+      </div>
+      <div>
+        <button onclick="log()" class="logOut">Log out</button>
+        <button  onclick="funct()" class="deleteAccountBtn">Delete Account</button>
+      </div>
+    </div>
+
+    <div class="projects">
+      <div></div>
+      <a href="./newproject.html">+</a>
+    </div>
+
+
+
+<script>
+let btn = document.querySelector(".deleteAccountBtn")
+
+function funct() {
+  window.localStorage.clear() 
+  window.location.href ="./index.html"
+}
+
+function log() {
+  window.location.href = "./index.html"
+}
+
+
+</script>
+  </body>
+</html>

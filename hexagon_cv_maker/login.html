@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./registration.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <a href="./index.html"
+        ><img
+          src="./images/Screenshot_2022-11-09_193403-removebg-preview.png"
+          alt=""
+        />
+        Hexagon</a
+      >
+    </div>
+
+    <div class="wrap">
+      <form>
+        <p class="message"></p>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <span>
+          <input type="checkbox" id="me" name="autodirect" />
+          <label for="me">Remember me</label>
+        </span>
+        <button>Submit</button>
+        <a href="./registration.html">Registration</a>
+      </form>
+    </div>
+
+    <script>
+      let form = document.querySelector("form");
+      let me = document.getElementById("me");
+      let userdata = JSON.parse(localStorage.getItem("userdata"));
+      let message = document.querySelector(".message");
+
+
+      
+       
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (me.checked == true) {
+          localStorage.setItem("info" , true)
+        }
+
+        let fd = new FormData(form);
+        let obj = Object.fromEntries(fd);
+       
+       
+        let json = JSON.stringify(obj);
+        localStorage.setItem("userdata", json);
+        if (
+          userdata.username == obj.username &&
+          userdata.password == obj.password
+        ) {
+          window.location.href = "./myprojects.html";
+        } else {
+          message.textContent = "invalid username or password";
+        }
+      });
+
+
+
+    </script>
+  </body>
+</html>

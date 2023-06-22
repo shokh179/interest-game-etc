@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./registration.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <a href="./index.html"
+        ><img
+          src="./images/Screenshot_2022-11-09_193403-removebg-preview.png"
+          alt=""
+        />
+        Hexagon</a
+      >
+    </div>
+    <div class="wrap">
+      <form>
+        <div>
+          <label for="username">Username</label>
+          <input required type="text" name="username" id="username" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input required type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input required type="password" name="password" id="password" />
+        </div>
+
+        <button>Submit</button>
+        <a href="./login.html">I hava an account</a>
+      </form>
+    </div>
+
+    <script>
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let fd = new FormData(form);
+        let obj = Object.fromEntries(fd);
+        // obj.autodirect = false;
+       
+        let json = JSON.stringify(obj);
+        localStorage.setItem("userdata", json);
+
+      
+
+        window.location.href = "./myprojects.html";
+      });
+    </script>
+  </body>
+</html>

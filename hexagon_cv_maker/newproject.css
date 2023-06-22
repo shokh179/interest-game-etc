@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: url("./images/icon.png");
+    background-repeat: no-repeat;
+
+}
+
+.top {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a03bff;
+}
+
+.top a {
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 8px 15px;
+  background: #a03bff;
+  color: white;
+  border: none;
+}
+
+.top .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #a03bff;
+}
+
+.top .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+}
+
+main .inputs {
+  width: 350px;
+  height: calc(100vh - 60px);
+  padding-top: 50px;
+  position: relative;
+}
+
+.inputs form {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.inputs form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs input {
+  padding: 2px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  border: 2px solid #3fb1fe;
+}
+
+.inputs textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 5px;
+  font-size: 20px;
+  border: 2px solid #3fb1fe;
+  border-radius: 5px;
+  outline: none;
+}
+
+.inputs form label {
+  font-weight: 700;
+  color: #a03bff;
+}
+
+.saveBtn {
+  top: 60px;
+  right: 20px;
+  padding: 10px 10px;
+  background: #a03bff;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result .paper {
+  width: 360px;
+  height: 520px;
+  padding: 20px;
+  background: linear-gradient(to right bottom, lightgreen, aqua);
+}
+
+.result .paper .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  gap: 5px;
+  padding-right: 10px;
+}
+
+.paper .main h2 {
+  color: #a03bff;
+  font-family: cursive;
+}
+
+.paper .main span {
+  color: blue;
+  font-size: 15px;
+  font-family: cursive;
+}
+
+.paper .main img {
+  width: 100px;
+  height: 100px;
+}
+.date {
+  padding: 20px 0;
+  color: #3fb1fe;
+  font-weight: 700;
+}
+
+.date .getDate {
+  font-weight: 300;
+  color: #a03bff;
+}
+
+.about {
+  color: #3fb1fe;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.about .getAbout {
+  color: #a03bff;
+  font-weight: 300;
+}
+
+.job {
+  color: #3fb1fe;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.job .getJob {
+  color: #a03bff;
+  font-weight: 300;
+}
