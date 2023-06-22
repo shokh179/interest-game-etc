@@ -1,0 +1,102 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: rgb(238, 197, 94);
+	color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+    color: rebeccapurple;
+}
+p{
+   color: purple;
+}
+
+.game{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.title{
+    padding-bottom: 30px;
+    color: magenta;
+	font-size: 4rem;
+	z-index: 2;
+}
+
+
+.score{
+	display: flex;
+	width: 30vw;
+	justify-content: space-evenly;
+	
+}
+
+.p-count,.c-count{
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+
+.options{
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	margin-top: 2rem;
+}
+
+
+.rock, .paper, .scissor{
+    font-size: 20px;
+	padding: 1rem;
+	width: 110px;
+	border-radius: 10px;
+	background: blue;
+	outline: none;
+	border-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.rock:hover, .paper:hover, .scissor:hover{
+    background-color: aquamarine;
+    color: black;
+}
+
+.move{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.movesleft{
+    color: brown;
+    font-size: 20px;
+}
+
+.reload {
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+	background: green;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.result{
+	margin-top: 20px;
+	font-size: 1.5rem;
+    color: red;
+}
+
+
