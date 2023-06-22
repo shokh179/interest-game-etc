@@ -1,0 +1,257 @@
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+   
+
+
+ 
+  .cont > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+  }
+  .cont> ul >li{
+    color: rgba(246, 133, 41, 0.993);
+    padding: 10px;
+    width: 250px;
+    height: 230px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 12px 10px 20px 10px #ccc;
+    background-color: #ffffff;
+  }
+
+  .cont>ul > li p:nth-child(2) {
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  .cont> ul> li p:nth-child(3) {
+      width: 240px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  
+  .navbar_sect>ol>li>a{
+    color: #231F20;
+  }
+  .navbar:hover{
+    background: linear-gradient(50deg, white, black);
+  }
+  
+  .navbar_sect>ol {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+  }
+  
+  .navbar_sect > a > img{
+    width: 60px;
+  }
+  
+  .navbar_sect > button{
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: white;
+  }
+  
+  .navbar_sect > button:hover{
+    background-color: orange;
+    color: white;
+  }
+  
+  .showcase{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;  
+    margin: 0 auto;
+  }
+  
+  .showcase_text{
+    width: 50%;
+    padding: 20px;
+    font-size: 18px;
+  }
+  .showcase_text>button{
+    background-color: #fff;
+    border: 1px solid orange;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  .showcase_text>button:hover{
+    background-color: orange;
+    color: white;
+  }
+  .showcase_sect{
+    width: 50%;
+  }
+  .showcase_sect > img{
+    width: 100%;
+  }
+
+  .head{
+    padding: 15px;
+    text-align: center;
+    font-size:1.6rem;
+  }
+
+  .ready{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F7941E;
+    padding: 50px 20px;
+    margin: 3% 0;
+  }
+
+  .ready_btn > button{
+    border: 1px solid  #231F20;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F7941E;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  .ready_btn > button:hover{
+    background-color: #231F20;
+    color: white;
+  }
+
+  .media{
+    width: 90%;
+    margin: 4% auto;
+    display: flex;
+    align-items: center;
+    background-color: #231F20;
+    color: white;
+  }
+
+  .media_text > h1{
+    line-height: 200px;
+    font-size: 50px;
+    font-weight: 300;
+  }
+
+  .media_text{
+    width: 60%;
+  }
+  .media_sect{
+    width: 40%;
+  }
+
+  .osect:hover{
+  background: linear-gradient(50deg,white, black);
+
+ }
+
+  .onlytext{
+    display: flex;
+    margin: 4% auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .osect{
+    width: 450px;
+    padding: 40px 20px;
+    box-shadow: 5px 6px 5px #ccc;
+    line-height: 30px;
+  }
+
+  .footer > ol{
+     display: flex;
+     justify-content: space-evenly;
+     font-size: 1.1rem;
+  }
+
+  .footer{
+    border-bottom: 2px solid #231F20;
+    margin: 2% 140px;
+    padding: 20px;
+  }
+
+  .footer>ol>li>a{
+    color: #231F20;
+  }
+
+  .icon{
+    width: 250px;
+    display: flex;
+    gap: 15px;
+    margin: 0 auto;
+  }
+
+  .lasttext{
+  text-align: center;
+  padding: 18px;
+  font-size: 18px;
+ 
+  }
+  .lasttext > p{
+    font-weight: 400;
+  }
+
+
+  @media (max-width:1115px) {
+    .media{
+      justify-content: space-evenly;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .media_text > h1{
+      line-height: 50px;
+      font-size: 22px;
+      font-weight: 300;
+
+    }
+  }
+
+  @media (max-width:850px){
+   .onlytext{
+    flex-direction: column;
+    gap: 20px;
+   }
+  }
+
+  @media (max-width:650px){
+    html{
+      font-size: 12px;
+    }
+     .showcase{
+      flex-direction: column;
+     }
+     .showcase_sect{
+      order: 1;
+     }
+     .showcase_text{
+      order: 2;
+     }
+  }
